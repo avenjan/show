@@ -2,10 +2,6 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
-.code { counter-reset: listing; }
-xmp { counter-increment: listing; }
-.code xmp:before { content: counter(listing) ". "; color: gray; }
-
 body {
   padding-bottom: 40px;
   color: #5a5a5a;
@@ -29,6 +25,10 @@ body {
 .isStuck{
     left:0px;
     width:100%;
+}
+
+.carousel-caption {
+	padding-bottom:0px;
 }
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -81,8 +81,13 @@ body {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 450px;
+  display:block;
+  min-height: 460px;
   background-color: #0A64A4;
+}
+.carousel-caption img{
+	position:relative;
+	height:130px;
 }
 .carousel-inner > .item > img {
   position: absolute;
@@ -135,7 +140,77 @@ body {
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
+@media (max-width: 992px){
+  .navbar.navbar-inverse.navbar-static-top a{
+    font-size: .8em;
+  }
+
+
+
+}
+
+@media (max-width: 768px) {
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+      border-color: #398439;
+    }
+
+  .navbar-inverse .navbar-toggle {
+    border:2px solid #398439;
+  }
+
+    .navbar-inverse .navbar-toggle:hover {
+      border:2px solid #398439;
+      background: #398439;
+    }
+
+    .navbar-inverse .navbar-toggle:active {
+      border:2px solid #398439;
+      background: #398439;
+    }
+    .navbar-inverse .navbar-toggle:focus {
+      border:2px solid #398439;
+      background: #398439;
+    }
+
+
+  .navbar {
+    border-radius: 6px;
+  }
+    .navbar.navbar-inverse.navbar-static-top a{
+    font-size: 1.5em;
+  }
+    .carousel-caption {
+    left: 5% !important;
+    right: 5% !important;
+  }
+  .row.featurette {
+    padding-top:20% !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+
+  #contents p {
+    text-align:justify;
+    text-justify:inter-word;
+  }
+
+  xmp {
+    font-size: .9em;
+    margin-left:-8%;
+  }
+
+}
+
+@media (max-width: 600px) {
+    xmp {
+    font-size: .65em;
+    margin-left:-20%;
+  }
+
+}
+
 @media (min-width: 768px) {
+
 
   /* Remove the edge padding needed for mobile */
   .marketing {
@@ -169,4 +244,7 @@ body {
   .featurette-heading {
     margin-top: 120px;
   }
-}
+
+} 
+
+@meda (m)
